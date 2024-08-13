@@ -1,6 +1,6 @@
 import { Server } from 'socket.io';
 
-const PORT = 3007;
+const PORT = 3012;
 
 // Criar servidor HTTP (sem HTTPS explícito)
 const io = new Server({
@@ -29,6 +29,7 @@ io.on("connection", socket => {
 
 // Função para enviar mensagens através do WebSocket
 const serverSendMessage = (messageType: string, data: IMessengerServiceBody) => {
+    console.log("mensagen recebida --> ", messageType)
     try {
         // Emitir mensagem para todos os sockets conectados
         io.emit(messageType, {

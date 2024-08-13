@@ -18,10 +18,10 @@ app.use(cors({
     credentials: true // 
 }))
 
-app.use("/main", WebsocketRoutes);
+app.use("/websocket", WebsocketRoutes);
 
-const port = process.env.PORT || 3777
+const port = process.env.PORT || 4001
 
 app.listen(port, () => {
-    console.log("WEBSOCKET SERVER listening on port: ", port)
+    console.log("WEBSOCKET API listening on port: ", port)
 })
