@@ -20,6 +20,10 @@ app.use(cors({
 
 app.use("/websocket", WebsocketRoutes);
 
+app.get('/check', (req, res) => {
+    res.send('arena JAF | Oficial WSS Websocket');
+});
+
 const port = process.env.PORT || 4001
 
 app.listen(port, () => {
