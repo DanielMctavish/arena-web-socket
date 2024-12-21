@@ -18,7 +18,7 @@ interface IMessengerServiceBody {
 }
 
 // Evento de conexão WebSocket
-io.on("connection", socket => {
+io.on("connection", (socket: any) => {
     console.log("a user connected [ID ]-> ", socket.id);
 
     // Listener para desconectar o socket
